@@ -354,7 +354,7 @@ class _SwipableStackState extends State<SwipableStack>
         return GestureDetector(
           behavior: widget.hitTestBehavior,
           dragStartBehavior: widget.dragStartBehavior,
-          onPanStart: (d) {
+          onHorizontalDragStart: (d) {
             if (!canSwipe) {
               return;
             }
@@ -378,7 +378,7 @@ class _SwipableStackState extends State<SwipableStack>
             // is zero.
             _dragStartController.forward(from: 0);
           },
-          onPanUpdate: (d) {
+          onHorizontalDragUpdate: (d) {
             if (!canSwipe) {
               return;
             }
@@ -403,7 +403,7 @@ class _SwipableStackState extends State<SwipableStack>
                   ),
             );
           },
-          onPanEnd: (d) {
+          onHorizontalDragEnd: (d) {
             if (!canSwipe) {
               return;
             }
